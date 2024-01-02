@@ -9,9 +9,9 @@ int testMacosCpp() {
     std::cout << "Running test-macos-cpp" << std::endl;
     
     auto configFolder = getConfigFolder(APPNAME);
-    auto dataFolder = getDataFolder(APPNAME);
+    auto dataFolder = getFolder(DATA_FOLDER, APPNAME);
     auto cacheFolder = getCacheFolder(APPNAME);
-    auto configFile = getConfigFile(APPNAME);
+    auto configFile = getFile(CONFIG_FILE, APPNAME);
 
     std::cout << "Config folder: " << std::quoted(configFolder) << std::endl;
     std::cout << "Data folder: "   << std::quoted(dataFolder) << std::endl;

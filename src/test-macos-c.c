@@ -16,10 +16,10 @@ int testMacos(void) {
     char* tooSmall = malloc(10 * sizeof(char));
 
     getConfigFolder(configFolder, MAX_PATH_LENGTH, APPNAME);
-    getDataFolder(dataFolder, MAX_PATH_LENGTH, APPNAME);
+    getFolder(DATA_FOLDER, dataFolder, MAX_PATH_LENGTH, APPNAME);
     getCacheFolder(cacheFolder, MAX_PATH_LENGTH, APPNAME);
-    getConfigFile(configFile, MAX_PATH_LENGTH, APPNAME);
-    getCacheFolder(tooSmall, 10, APPNAME);
+    getFile(CONFIG_FILE, configFile, MAX_PATH_LENGTH, APPNAME);
+    getConfigFolder(tooSmall, 10, APPNAME);
 
     printf("Config folder:    %s\n", strlen(configFolder) ? configFolder : "ERROR");
     printf("Data folder:      %s\n", strlen(dataFolder) ? dataFolder : "ERROR");
