@@ -1,17 +1,18 @@
+#ifndef LIBCFGPATH_TESTS_TEST_H_
+#define LIBCFGPATH_TESTS_TEST_H_
+
 #include "libcfgpath/common.h"
 
 #define APPNAME "myapp"
 
-// C tests
-LIBCFGPATH_IF_CPP()
+LIBCFGPATH_C_LINKAGE()
 
+// C tests
 int testMacos(void);
 
-LIBCFGPATH_IF_CPP_END()
-
 // C++ tests
-#ifdef __cplusplus
+int testMacosCpp(void);
 
-int testMacosCpp();
+LIBCFGPATH_C_LINKAGE_END()
 
-#endif
+#endif //LIBCFGPATH_TESTS_TEST_H_

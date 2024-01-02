@@ -5,6 +5,8 @@
 
 #include "libcfgpath/cfgpath.h"
 
+LIBCFGPATH_C_LINKAGE()
+
 int testMacosCpp() {
     std::cout << "Running test-macos-cpp" << std::endl;
     
@@ -23,3 +25,4 @@ int testMacosCpp() {
     return EXIT_SUCCESS;
 }
 
+LIBCFGPATH_C_LINKAGE_END()

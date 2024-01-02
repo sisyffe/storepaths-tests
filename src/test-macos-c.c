@@ -6,6 +6,8 @@
 
 #include "libcfgpath/cfgpath.h"
 
+LIBCFGPATH_C_LINKAGE()
+
 int testMacos(void) {
     puts("Running test-macos");
 
@@ -36,3 +38,5 @@ int testMacos(void) {
     puts("Done test-macos");
     return EXIT_SUCCESS;
 }
+
+LIBCFGPATH_C_LINKAGE_END()
