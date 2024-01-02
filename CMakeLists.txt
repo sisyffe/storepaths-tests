@@ -9,7 +9,7 @@ project(libcfgpathTests)
 add_executable(libcfgpathTests)
 target_include_directories(libcfgpathTests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_sources(libcfgpathTests PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/test-macos.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/test-macos-c.c
         ${CMAKE_CURRENT_SOURCE_DIR}/src/test-macos-cpp.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
 )
