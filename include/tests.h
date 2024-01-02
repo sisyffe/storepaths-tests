@@ -3,15 +3,15 @@
 #define APPNAME "myapp"
 
 // C tests
-LIBCFGPATH_CPP_CHECK()
+LIBCFGPATH_IF_CPP()
 
 int testMacos(void);
 
-LIBCFGPATH_CPP_CHECK_END()
+LIBCFGPATH_IF_CPP_END()
 
 // C++ tests
 #ifdef __cplusplus
 
-int testMacosCpp(void);
+int testMacosCpp();
 
 #endif
