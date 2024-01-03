@@ -3,7 +3,7 @@
 
 #include "libcfgpath/common.h"
 
-#define APPNAME "myapp"
+#define APPNAME "test-app"
 
 LIBCFGPATH_C_LINKAGE()
 
