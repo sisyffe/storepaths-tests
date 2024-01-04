@@ -12,7 +12,7 @@ int main() {
 
 /*
  * TODOs:
- * 1 - implement windows
- * 2 - custom string stream
- * 3 - cpp namespace & refractor enum functions
+ * 1 - Custom reservable string stream
+ * 2 - Add C++ specific functions for conveneience by
+ *     refractoring existing enum functions
  */
