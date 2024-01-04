@@ -22,10 +22,18 @@ target_include_directories(libcfgpathTests PRIVATE
 target_link_libraries(libcfgpathTests PRIVATE libcfgpath)
 
 # Compile options
-target_compile_options(libcfgpathTests
-        PUBLIC
-        -Wall
-        -Wpedantic
-        -Wextra
-        -Werror
-)
+if(CYGWIN)
+    target_compile_options(libcfgpathTests
+            PUBLIC
+            /Wall
+            /WX
+    )
+elseif(UNIX)
+    target_compile_options(libcfgpathTests
+            PUBLIC
+            -Wall
+            -Wpedantic
+            -Wextra
+            -Werror
+    )
+endif()
