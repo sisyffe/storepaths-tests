@@ -8,10 +8,10 @@
 LIBCFGPATH_C_LINKAGE()
 
 // C tests
-int testMacos(void);
+int testCommon(void);
 
 // C++ tests
-int testMacosCpp(void);
+int testCommonCpp(void);
 
 LIBCFGPATH_C_LINKAGE_END()
 

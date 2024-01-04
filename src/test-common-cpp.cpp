@@ -7,8 +7,8 @@
 
 LIBCFGPATH_C_LINKAGE()
 
-int testMacosCpp() {
-    std::cout << "Running test-macos-cpp" << std::endl;
+int testCommonCpp() {
+    std::cout << "Running test-common-cpp" << std::endl;
     
     auto configFolder = getConfigFolder(APPNAME);
     auto dataFolder = getFolder(DATA_FOLDER, APPNAME);
@@ -20,7 +20,7 @@ int testMacosCpp() {
     std::cout << "Cache folder: "  << std::quoted(cacheFolder) << std::endl;
     std::cout << "Config file: "   << std::quoted(configFile) << std::endl;
 
-    std::cout << "Done test-macos-cpp" << std::endl;
+    std::cout << "Done test-common-cpp" << std::endl;
 
     return EXIT_SUCCESS;
 }

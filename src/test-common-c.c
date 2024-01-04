@@ -8,8 +8,8 @@
 
 LIBCFGPATH_C_LINKAGE()
 
-int testMacos(void) {
-    puts("Running test-macos");
+int testCommon(void) {
+    puts("Running test-common");
 
     char* configFolder = malloc(MAX_PATH_LENGTH * sizeof(char));
     char* dataFolder = malloc(MAX_PATH_LENGTH * sizeof(char));
@@ -35,7 +35,7 @@ int testMacos(void) {
     free(configFile);
     free(tooSmall);
 
-    puts("Done test-macos");
+    puts("Done test-common");
     return EXIT_SUCCESS;
 }
 
