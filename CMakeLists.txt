@@ -22,7 +22,7 @@ target_include_directories(libcfgpathTests PRIVATE
 target_link_libraries(libcfgpathTests PRIVATE libcfgpath)
 
 # Compile options
-if(CYGWIN)
+if(WIN32)
     target_compile_options(libcfgpathTests
             PUBLIC
             /Wall
@@ -36,4 +36,6 @@ elseif(UNIX)
             -Wextra
             -Werror
     )
+else()
+    message(SEND_ERROR "Unknown platform")
 endif()
