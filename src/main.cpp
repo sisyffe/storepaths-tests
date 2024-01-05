@@ -12,7 +12,5 @@ int main() {
 
 /*
  * TODOs:
- * 1 - Custom reservable string stream
- * 2 - Add C++ specific functions for conveneience by
- *     refractoring existing enum functions
+ * 1 - Refractor toString windows function
  */
