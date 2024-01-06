@@ -22,13 +22,7 @@ target_include_directories(libcfgpathTests PRIVATE
 target_link_libraries(libcfgpathTests PRIVATE libcfgpath)
 
 # Compile options
-if(WIN32)
-    target_compile_options(libcfgpathTests
-            PUBLIC
-            /Wall
-            /WX
-    )
-elseif(UNIX)
+if(UNIX)
     target_compile_options(libcfgpathTests
             PUBLIC
             -Wall
@@ -36,4 +30,6 @@ elseif(UNIX)
             -Wextra
             -Werror
     )
+# Windows raises lots of unnecessary warnings if compiled with /Wall
+# so default compilation
 endif()
