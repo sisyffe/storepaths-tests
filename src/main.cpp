@@ -12,5 +12,5 @@ int main() {
 
 /*
  * TODOs:
- * 1 - Refractor toString windows function
+ * 1 - Add state and runtime dirs (https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
  */

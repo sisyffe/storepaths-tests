@@ -10,15 +10,18 @@ LIBCFGPATH_C_LINKAGE()
 int testCommonCpp() {
     std::cout << "Running test-common-cpp" << std::endl;
     
-    auto configFolder = libcfgpath::getConfigFolder(APPNAME);
-    auto dataFolder = libcfgpath::getFolder(DATA_FOLDER, APPNAME);
-    auto cacheFolder = libcfgpath::getCacheFolder(APPNAME);
+    auto [configFolder, configFolderOk] = libcfgpath::getConfigFolder(APPNAME);
+    auto [dataFolder, dataFolderOk] = libcfgpath::getFolder(DATA_FOLDER, APPNAME);
+    auto [cacheFolder, cacheFolderOk] = libcfgpath::getCacheFolder(APPNAME);
     auto configFile = libcfgpath::getFile(CONFIG_FILE, APPNAME);
 
-    std::cout << "Config folder: " << std::quoted(configFolder) << std::endl;
-    std::cout << "Data folder: "   << std::quoted(dataFolder) << std::endl;
-    std::cout << "Cache folder: "  << std::quoted(cacheFolder) << std::endl;
-    std::cout << "Config file: "   << std::quoted(configFile) << std::endl;
+    std::cout << "Config folder" << (configFolderOk ? "" : " failed to be created") << ": "
+        << std::quoted(configFolder) << std::endl;
+    std::cout << "Data folder" << (dataFolderOk ? "" : " failed to be created") << ": "
+        << std::quoted(dataFolder) << std::endl;
+    std::cout << "Cache folder" << (cacheFolderOk ? "" : " failed to be created") << ": "
+        << std::quoted(cacheFolder) << std::endl;
+    std::cout << "Config file: " << std::quoted(configFile) << std::endl;
 
     std::cout << "Done test-common-cpp" << std::endl;
 
