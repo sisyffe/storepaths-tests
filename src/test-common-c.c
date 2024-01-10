@@ -23,8 +23,10 @@ int testCommon(void) {
     const PathInfo configFolderInfo = getConfigFolder(configFolder, MAX_PATH_LENGTH, APP_NAME);
     const PathInfo dataFolderInfo = getDataFolder(dataFolder, MAX_PATH_LENGTH, APP_NAME);
     const PathInfo cacheFolderInfo = getCacheFolder(cacheFolder, MAX_PATH_LENGTH, APP_NAME);
-    const PathInfo jsonConfigFileInfo = getJSONConfigFile(jsonConfigFile, MAX_PATH_LENGTH, APP_NAME);
-    const PathInfo configFileInfo = GET_PLATFORM_CONFIG_FILE(configFile, MAX_PATH_LENGTH, BUNDLE_IDENTIFIER);
+    const PathInfo jsonConfigFileInfo = getJSONConfigFile(jsonConfigFile, MAX_PATH_LENGTH,
+        APP_NAME, "config");
+    const PathInfo configFileInfo = GET_PLATFORM_CONFIG_FILE(configFile, MAX_PATH_LENGTH,
+        BUNDLE_IDENTIFIER, NULL);
     const PathInfo tooSmallInfo = getConfigFolder(tooSmall, 10, APP_NAME);
 
     printf("Config folder%s: %s\n", getMessage(&configFolderInfo), STR_OR_ERROR(configFolder));
