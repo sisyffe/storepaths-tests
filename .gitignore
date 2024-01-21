@@ -1,0 +1,7 @@
+.vscode # Visual Studio code files
+.idea # CLion files
+.vs # Microsoft visual studio files
+build # Build folder
+out # Build folder on windows
+.clang-format
+todos.md

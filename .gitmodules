@@ -1,0 +1,3 @@
+[submodule "storepaths"]
+	path = storepaths
+	url = https://github.com/sisyffe/storepaths.git
