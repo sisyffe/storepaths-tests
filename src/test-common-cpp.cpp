@@ -2,20 +2,20 @@
 #include <iomanip>
 #include <cstring>
 
-#include "libcfgpath/cfgpath.h"
+#include "storepaths/storepaths.h"
 
 #include "tests.h"
 
-LIBCFGPATH_C_LINKAGE()
+STOREPATHS_C_LINKAGE()
 
 int testCommonCpp() {
     std::cout << "Running test-common-cpp" << std::endl;
     
-    auto [configFolder, configFolderInfo] = libcfgpath::getConfigFolder(APP_NAME);
-    auto [dataFolder, dataFolderInfo] = libcfgpath::getFolder(libcfgpath::DATA_FOLDER, APP_NAME);
-    auto [cacheFolder, cacheFolderInfo] = libcfgpath::getCacheFolder(APP_NAME);
-    auto [jsonConfigFile, jsonConfigFileInfo] = libcfgpath::getFile(libcfgpath::JSON_CONFIG_FILE, APP_NAME);
-    auto [configFile, configFileInfo] = libcfgpath::GET_PLATFORM_CONFIG_FILE(BUNDLE_IDENTIFIER);
+    auto [configFolder, configFolderInfo] = storepaths::getConfigFolder(APP_NAME);
+    auto [dataFolder, dataFolderInfo] = storepaths::getFolder(storepaths::DATA_FOLDER, APP_NAME);
+    auto [cacheFolder, cacheFolderInfo] = storepaths::getCacheFolder(APP_NAME);
+    auto [jsonConfigFile, jsonConfigFileInfo] = storepaths::getFile(storepaths::JSON_CONFIG_FILE, APP_NAME);
+    auto [configFile, configFileInfo] = storepaths::GET_PLATFORM_CONFIG_FILE(BUNDLE_IDENTIFIER);
 
     std::cout << "Config folder" << getMessage(&configFolderInfo) << ": "
         << std::quoted(STR_OR_ERROR(configFolder.c_str())) << std::endl;
@@ -33,4 +33,4 @@ int testCommonCpp() {
     return EXIT_SUCCESS;
 }
 
-LIBCFGPATH_C_LINKAGE_END()
+STOREPATHS_C_LINKAGE_END()

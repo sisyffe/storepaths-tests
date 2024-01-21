@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "libcfgpath/cfgpath.h"
+#include "storepaths/storepaths.h"
 
 #include "tests.h"
 
