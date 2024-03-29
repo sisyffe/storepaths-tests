@@ -1,7 +1,7 @@
 #ifndef STOREPATHS_TESTS_TEST_H_
 #define STOREPATHS_TESTS_TEST_H_
 
-#include "storepaths/common.h"
+#include <storepaths/common.h>
 
 // Define the app name for tests
 #define APP_NAME "test-app"
@@ -22,7 +22,7 @@
 
 #define STR_OR_ERROR(string) strlen(string) ? string : "ERROR"
 
-STOREPATHS_C_LINKAGE()
+STOREPATHS_C_LINKAGE
 
 // C tests
 int testCommon(void);
@@ -30,9 +30,15 @@ int testCommon(void);
 // C++ tests
 int testCommonCpp(void);
 
-STOREPATHS_C_LINKAGE_END()
+STOREPATHS_C_LINKAGE_END
 
-static inline const char* getMessage(const PathInfo* info) {
+#ifndef __cplusplus
+#  define PATHINFO PathInfo
+#else
+#  define PATHINFO storepaths::PathInfo
+#endif
+
+static inline const char* getMessage(const PATHINFO* info) {
     if (info->bufferTooSmall)
         return " does not fit";
     if (!info->found)

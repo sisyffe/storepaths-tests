@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(storepaths-tests)
 add_executable(storepaths-tests)
 target_sources(storepaths-tests PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/tests.h
         ${CMAKE_CURRENT_SOURCE_DIR}/src/test-common-c.c
         ${CMAKE_CURRENT_SOURCE_DIR}/src/test-common-cpp.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
