@@ -32,7 +32,7 @@ int testCommonCpp() {
         << std::quoted(STR_OR_ERROR(cacheFolder.c_str())) << std::endl;
     std::cout << "Common config file (Default)" << getMessage(&commonConfigFileDefaultInfo) << ": "
         << std::quoted(STR_OR_ERROR(commonConfigFileDefault.c_str())) << std::endl;
-    std::cout << "Common config file (JSON)" << getMessage(&commonConfigFileYMLInfo) << ": "
+    std::cout << "Common config file (YML)" << getMessage(&commonConfigFileYMLInfo) << ": "
         << std::quoted(STR_OR_ERROR(commonConfigFileYML.c_str())) << std::endl;
     std::cout << "Config file" << getMessage(&configFileInfo) << ": "
         << std::quoted(STR_OR_ERROR(configFile.c_str())) << std::endl;
